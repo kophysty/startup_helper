@@ -1,0 +1,41 @@
+- id: runway_warning
+  name: "Runway Warning"
+  condition: "runway < 6"
+  message: "⚠️ Runway is less than 6 months. Consider fundraising or cost reduction."
+  severity: "warning"
+
+- id: churn_critical
+  name: "High Churn"
+  condition: "churn > 20"
+  message: "🚨 Churn rate is above 20%. This is critical for business sustainability."
+  severity: "critical"
+
+- id: cac_ltv_ratio
+  name: "CAC/LTV Ratio"
+  condition: "cac > ltv/3"
+  message: "⚠️ Customer acquisition cost is too high relative to lifetime value."
+  severity: "warning"
+
+- id: burn_rate_high
+  name: "High Burn Rate"
+  condition: "burn_rate > revenue"
+  message: "🚨 Monthly burn exceeds revenue. This is unsustainable."
+  severity: "critical"
+
+- id: price_low
+  name: "Low Price Point"
+  condition: "price < 25"
+  message: "💡 Consider increasing price. Current price is below industry average."
+  severity: "info"
+
+- id: cash_balance_low
+  name: "Low Cash Balance"
+  condition: "cash_balance < 10000"
+  message: "⚠️ Cash balance is low. Consider fundraising or cost reduction."
+  severity: "warning"
+
+- id: team_size_growth
+  name: "Team Growth"
+  condition: "team_size > 10"
+  message: "💡 Large team size may impact burn rate. Consider hiring freeze."
+  severity: "info" 

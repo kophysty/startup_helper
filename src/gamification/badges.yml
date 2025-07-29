@@ -1,0 +1,55 @@
+- id: first_complete
+  name: "First Steps"
+  description: "Completed your first financial model"
+  icon: "🎯"
+  condition: "wizard_completed == true"
+  points: 10
+
+- id: runway_optimizer
+  name: "Runway Optimizer"
+  description: "Achieved runway of 12+ months"
+  icon: "⏰"
+  condition: "runway >= 12"
+  points: 25
+
+- id: churn_master
+  name: "Churn Master"
+  description: "Kept churn rate below 5%"
+  icon: "📉"
+  condition: "churn <= 5"
+  points: 30
+
+- id: cac_efficient
+  name: "CAC Efficient"
+  description: "CAC/LTV ratio below 0.3"
+  icon: "💰"
+  condition: "cac_ltv_ratio <= 0.3"
+  points: 40
+
+- id: revenue_growth
+  name: "Revenue Growth"
+  description: "MRR growth rate above 15%"
+  icon: "📈"
+  condition: "mrr_growth_rate >= 15"
+  points: 35
+
+- id: sage_advisor
+  name: "Sage Advisor"
+  description: "Received 5+ positive feedback ratings"
+  icon: "🧠"
+  condition: "positive_feedback >= 5"
+  points: 50
+
+- id: benchmark_beater
+  name: "Benchmark Beater"
+  description: "Exceeded industry benchmarks in 3+ metrics"
+  icon: "🏆"
+  condition: "benchmarks_exceeded >= 3"
+  points: 60
+
+- id: sustainability_expert
+  name: "Sustainability Expert"
+  description: "Burn rate below revenue"
+  icon: "🌱"
+  condition: "burn_rate < revenue"
+  points: 45 

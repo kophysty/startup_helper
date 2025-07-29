@@ -1,0 +1,7 @@
+metric,saas_b2b,saas_b2c,ecommerce,marketplace
+mrr_growth_rate,15,25,20,30
+churn_rate,5,8,12,15
+cac_ltv_ratio,0.3,0.4,0.5,0.6
+runway_months,18,12,15,10
+burn_rate_revenue_ratio,0.8,1.2,1.0,1.5
+price_percentile,75,50,60,40 

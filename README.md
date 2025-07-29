@@ -1,47 +1,44 @@
-# Startup Helper
+# Startup Financial OS — MVP
 
-A tool to help with startup development and management.
+**Tag-line:** *OS-level reliability, game-level usability.*  
+AI-агент-кофаундер задаёт 20 «золотых» вопросов, строит P&L / Runway, проверяет цифры по бенчмаркам и каждую неделю присылает совет, как продлить runway.
 
-## Description
+---
 
-This project provides utilities and tools to assist with startup development, including project management, task tracking, and development workflow optimization.
+## ✨ Core Features (MVP)
+| Module | What it does |
+|--------|--------------|
+| **Wizard 1.0** | 20 questions with smart defaults (SaaS / e-com branch) |
+| **Core Engine 0.1** | Calculates MRR, churn, CAC, burn, runway |
+| **Sanity-Check** | 5 benchmark rules (e.g. Runway < 6 m) |
+| **Sage Agent** | Chat UI, `calculate_model` + `suggest_changes` |
+| **One-Pager Export** | PDF + CSV in 1 click |
+| **Gamification Lite** | Progress ring + 3 starter badges |
 
-## Features
+## 🏗️ Architecture
+* Single-process Streamlit app → direct imports (`core_engine`, `agent_core`).
+* SQLite file (`sage.db`) for models & chat history.
+* Config-driven YAML (questions, badges, rules) ⇒ easy extensions.
 
-- Project management tools
-- Task tracking
-- Development workflow optimization
-- Startup-specific utilities
-
-## Getting Started
-
-### Prerequisites
-
-- Git
-- Your preferred development environment
-
-### Installation
-
-1. Clone the repository:
+## 🚀 Quick Start
 ```bash
 git clone https://github.com/kophysty/startup_helper.git
 cd startup_helper
+cp env.example .env            # add OpenAI key
+poetry install
+poetry run streamlit run streamlit_app.py
 ```
 
-2. Follow the setup instructions in the documentation.
+## 🧩 Roadmap
+| Week | Goal | Deliverables |
+|------|------|--------------|
+| 1 | Core Engine | formulas + unit-tests |
+| 2 | Wizard + Validation | Streamlit forms, progress ring |
+| 3 | One-Pager + Landing | PDF export, wait-list page |
+| 4 | Gamification & Agent | badges, feedback log, integration tests |
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📜 License
+MIT — see LICENSE.
 
 ## Contact
-
 - GitHub: [@kophysty](https://github.com/kophysty) 

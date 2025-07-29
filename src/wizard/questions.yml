@@ -1,0 +1,120 @@
+- id: project_type
+  text: "What type of project are you building?"
+  type: select
+  options: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+  default: "B2B SaaS"
+  branch: []
+
+- id: price
+  text: "Average monthly subscription price (USD)?"
+  type: currency
+  default: 50
+  branch: ["B2B SaaS", "B2C SaaS"]
+
+- id: customers
+  text: "How many paying customers today?"
+  type: integer
+  default: 0
+  branch: ["B2B SaaS", "B2C SaaS"]
+
+- id: churn_rate
+  text: "Monthly churn rate (%)?"
+  type: percent
+  default: 5
+  branch: ["B2B SaaS", "B2C SaaS"]
+
+- id: marketing_spend
+  text: "Monthly marketing spend (USD)?"
+  type: currency
+  default: 0
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+
+- id: new_customers
+  text: "New customers acquired this month?"
+  type: integer
+  default: 0
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+
+- id: expenses_monthly
+  text: "Other operating expenses per month (USD)?"
+  type: currency
+  default: 10000
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+
+- id: cash_balance
+  text: "Cash in bank today (USD)?"
+  type: currency
+  default: 50000
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+
+- id: team_size
+  text: "How many full-time employees?"
+  type: integer
+  default: 1
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+
+- id: revenue_monthly
+  text: "Monthly revenue (USD)?"
+  type: currency
+  default: 0
+  branch: ["E-commerce", "Marketplace"]
+
+- id: average_order_value
+  text: "Average order value (USD)?"
+  type: currency
+  default: 100
+  branch: ["E-commerce", "Marketplace"]
+
+- id: conversion_rate
+  text: "Website conversion rate (%)?"
+  type: percent
+  default: 2
+  branch: ["E-commerce", "Marketplace"]
+
+- id: customer_lifetime_months
+  text: "Average customer lifetime (months)?"
+  type: integer
+  default: 12
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+
+- id: sales_cycle_days
+  text: "Average sales cycle (days)?"
+  type: integer
+  default: 30
+  branch: ["B2B SaaS"]
+
+- id: contract_value
+  text: "Average annual contract value (USD)?"
+  type: currency
+  default: 600
+  branch: ["B2B SaaS"]
+
+- id: support_cost_per_customer
+  text: "Monthly support cost per customer (USD)?"
+  type: currency
+  default: 10
+  branch: ["B2B SaaS", "B2C SaaS"]
+
+- id: infrastructure_cost
+  text: "Monthly infrastructure costs (USD)?"
+  type: currency
+  default: 500
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+
+- id: legal_accounting
+  text: "Monthly legal/accounting costs (USD)?"
+  type: currency
+  default: 1000
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+
+- id: office_rent
+  text: "Monthly office rent (USD)?"
+  type: currency
+  default: 0
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+
+- id: runway_target
+  text: "Target runway in months?"
+  type: integer
+  default: 18
+  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"] 
