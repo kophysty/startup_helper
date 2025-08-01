@@ -5,6 +5,27 @@
   condition: "wizard_completed == true"
   points: 10
 
+- id: quality_master
+  name: "Quality Master"
+  description: "Achieved quality score of 80+"
+  icon: "🏆"
+  condition: "quality_score >= 80"
+  points: 50
+
+- id: quality_expert
+  name: "Quality Expert"
+  description: "Achieved quality score of 60+"
+  icon: "⭐"
+  condition: "quality_score >= 60"
+  points: 30
+
+- id: quality_improver
+  name: "Quality Improver"
+  description: "Achieved quality score of 40+"
+  icon: "📈"
+  condition: "quality_score >= 40"
+  points: 20
+
 - id: runway_optimizer
   name: "Runway Optimizer"
   description: "Achieved runway of 12+ months"
@@ -52,4 +73,25 @@
   description: "Burn rate below revenue"
   icon: "🌱"
   condition: "burn_rate < revenue"
-  points: 45 
+  points: 45
+
+- id: lean_startup
+  name: "Lean Startup"
+  description: "Team size under 10 people"
+  icon: "👥"
+  condition: "team_size <= 10"
+  points: 15
+
+- id: price_optimizer
+  name: "Price Optimizer"
+  description: "Set price above $50/month"
+  icon: "💎"
+  condition: "price >= 50"
+  points: 20
+
+- id: growth_hacker
+  name: "Growth Hacker"
+  description: "Achieved 20%+ monthly growth"
+  icon: "🚀"
+  condition: "growth_rate >= 20"
+  points: 35 

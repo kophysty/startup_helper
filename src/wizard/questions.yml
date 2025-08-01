@@ -1,120 +1,152 @@
 - id: project_type
   text: "What type of project are you building?"
+  short: "Project Type"
   type: select
   options: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
   default: "B2B SaaS"
   branch: []
+  tip_id: "project_type"
 
 - id: price
   text: "Average monthly subscription price (USD)?"
+  short: "Price"
   type: currency
   default: 50
   branch: ["B2B SaaS", "B2C SaaS"]
+  benchmark: "Industry median for B2B SaaS is **$49**"
+  tip_id: "price"
 
 - id: customers
   text: "How many paying customers today?"
+  short: "Customers"
   type: integer
   default: 0
   branch: ["B2B SaaS", "B2C SaaS"]
+  benchmark: "Most early-stage startups have 0-50 customers"
+  tip_id: "customers"
 
 - id: churn_rate
   text: "Monthly churn rate (%)?"
+  short: "Churn Rate"
   type: percent
   default: 5
   branch: ["B2B SaaS", "B2C SaaS"]
+  benchmark: "Good churn rate is **< 5%**"
+  tip_id: "churn_rate"
 
 - id: marketing_spend
   text: "Monthly marketing spend (USD)?"
+  short: "Marketing Spend"
   type: currency
   default: 0
   branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+  benchmark: "Typical spend is 20-30% of revenue"
+  tip_id: "marketing_spend"
 
 - id: new_customers
   text: "New customers acquired this month?"
+  short: "New Customers"
   type: integer
   default: 0
   branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+  benchmark: "Aim for **10-20%** monthly growth"
+  tip_id: "new_customers"
 
 - id: expenses_monthly
   text: "Other operating expenses per month (USD)?"
+  short: "Monthly Expenses"
   type: currency
   default: 10000
   branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+  benchmark: "Keep burn rate **< revenue**"
+  tip_id: "expenses_monthly"
 
 - id: cash_balance
   text: "Cash in bank today (USD)?"
+  short: "Cash Balance"
   type: currency
   default: 50000
   branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+  benchmark: "Aim for **6+ months** runway"
+  tip_id: "cash_balance"
 
 - id: team_size
   text: "How many full-time employees?"
+  short: "Team Size"
   type: integer
   default: 1
   branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+  benchmark: "Start lean, **< 10** people"
+  tip_id: "team_size"
 
 - id: revenue_monthly
   text: "Monthly revenue (USD)?"
+  short: "Monthly Revenue"
   type: currency
   default: 0
   branch: ["E-commerce", "Marketplace"]
+  benchmark: "Track **MRR growth** monthly"
+  tip_id: "revenue_monthly"
 
 - id: average_order_value
   text: "Average order value (USD)?"
+  short: "Order Value"
   type: currency
   default: 100
   branch: ["E-commerce", "Marketplace"]
+  benchmark: "Industry average is **$85-120**"
+  tip_id: "average_order_value"
 
 - id: conversion_rate
   text: "Website conversion rate (%)?"
+  short: "Conversion Rate"
   type: percent
   default: 2
   branch: ["E-commerce", "Marketplace"]
+  benchmark: "Good rate is **2-5%**"
+  tip_id: "conversion_rate"
 
 - id: customer_lifetime_months
   text: "Average customer lifetime (months)?"
+  short: "Customer Lifetime"
   type: integer
   default: 12
   branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
+  benchmark: "B2B: **12-24 months**, B2C: **6-12 months**"
+  tip_id: "customer_lifetime_months"
 
 - id: sales_cycle_days
   text: "Average sales cycle (days)?"
+  short: "Sales Cycle"
   type: integer
   default: 30
   branch: ["B2B SaaS"]
+  benchmark: "B2B SaaS: **30-90 days**"
+  tip_id: "sales_cycle_days"
 
 - id: contract_value
   text: "Average annual contract value (USD)?"
+  short: "Contract Value"
   type: currency
   default: 600
   branch: ["B2B SaaS"]
+  benchmark: "Typical ACV: **$500-2000**"
+  tip_id: "contract_value"
 
 - id: support_cost_per_customer
   text: "Monthly support cost per customer (USD)?"
+  short: "Support Cost"
   type: currency
   default: 10
   branch: ["B2B SaaS", "B2C SaaS"]
+  benchmark: "Keep **< 15%** of revenue"
+  tip_id: "support_cost_per_customer"
 
 - id: infrastructure_cost
   text: "Monthly infrastructure costs (USD)?"
+  short: "Infrastructure"
   type: currency
   default: 500
   branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
-
-- id: legal_accounting
-  text: "Monthly legal/accounting costs (USD)?"
-  type: currency
-  default: 1000
-  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
-
-- id: office_rent
-  text: "Monthly office rent (USD)?"
-  type: currency
-  default: 0
-  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"]
-
-- id: runway_target
-  text: "Target runway in months?"
-  type: integer
-  default: 18
-  branch: ["B2B SaaS", "B2C SaaS", "E-commerce", "Marketplace"] 
+  benchmark: "Should be **< 10%** of revenue"
+  tip_id: "infrastructure_cost" 

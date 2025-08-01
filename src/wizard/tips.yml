@@ -1,0 +1,84 @@
+project_type:
+  title: "Project Type"
+  text: "Choose the business model that best describes your startup. This affects which questions you'll see and the benchmarks we'll use."
+  related: ["price", "customers", "churn_rate"]
+
+price:
+  title: "Subscription Price"
+  text: "Monthly recurring revenue per customer. Higher prices often mean fewer customers but better unit economics."
+  related: ["customers", "churn_rate", "contract_value"]
+
+customers:
+  title: "Paying Customers"
+  text: "Active customers who pay monthly. Track this number weekly to measure growth."
+  related: ["price", "churn_rate", "new_customers"]
+
+churn_rate:
+  title: "Churn Rate"
+  text: "Percentage of customers who cancel monthly. Keep this under 5% for sustainable growth."
+  related: ["price", "customers", "customer_lifetime_months"]
+
+marketing_spend:
+  title: "Marketing Spend"
+  text: "Monthly budget for customer acquisition. Should be 20-30% of revenue for growth-stage startups."
+  related: ["new_customers", "cac", "revenue_monthly"]
+
+new_customers:
+  title: "New Customers"
+  text: "Customers acquired this month. Aim for 10-20% monthly growth rate."
+  related: ["marketing_spend", "customers", "conversion_rate"]
+
+expenses_monthly:
+  title: "Monthly Expenses"
+  text: "All operating costs excluding marketing. Keep burn rate below revenue for sustainability."
+  related: ["cash_balance", "runway", "team_size"]
+
+cash_balance:
+  title: "Cash Balance"
+  text: "Money in the bank today. Aim for 6+ months runway to survive fundraising cycles."
+  related: ["expenses_monthly", "runway", "burn_rate"]
+
+team_size:
+  title: "Team Size"
+  text: "Full-time employees. Start lean with <10 people to control burn rate."
+  related: ["expenses_monthly", "cash_balance", "burn_rate"]
+
+revenue_monthly:
+  title: "Monthly Revenue"
+  text: "Total monthly recurring revenue. Track MRR growth rate monthly."
+  related: ["customers", "price", "expenses_monthly"]
+
+average_order_value:
+  title: "Order Value"
+  text: "Average transaction size. Higher AOV means better unit economics."
+  related: ["revenue_monthly", "customers", "conversion_rate"]
+
+conversion_rate:
+  title: "Conversion Rate"
+  text: "Percentage of visitors who become customers. Good rate is 2-5%."
+  related: ["marketing_spend", "new_customers", "average_order_value"]
+
+customer_lifetime_months:
+  title: "Customer Lifetime"
+  text: "How long customers stay on average. B2B: 12-24 months, B2C: 6-12 months."
+  related: ["churn_rate", "ltv", "price"]
+
+sales_cycle_days:
+  title: "Sales Cycle"
+  text: "Days from first contact to closed deal. B2B SaaS typically 30-90 days."
+  related: ["contract_value", "new_customers", "revenue_monthly"]
+
+contract_value:
+  title: "Contract Value"
+  text: "Annual contract value per customer. Higher ACV means fewer customers needed."
+  related: ["price", "sales_cycle_days", "customers"]
+
+support_cost_per_customer:
+  title: "Support Cost"
+  text: "Monthly cost to support each customer. Keep under 15% of revenue."
+  related: ["customers", "expenses_monthly", "price"]
+
+infrastructure_cost:
+  title: "Infrastructure"
+  text: "Monthly costs for servers, tools, etc. Should be under 10% of revenue."
+  related: ["expenses_monthly", "customers", "revenue_monthly"] 
